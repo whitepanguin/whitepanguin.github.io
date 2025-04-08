@@ -79,14 +79,14 @@ button:focus {
   width: 100%;
   padding: 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 1;
 }
 .header__logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 .header__logo__img {
   border: 1px solid var(--color-text);
@@ -100,7 +100,7 @@ button:focus {
 
 .header__menu {
   display: flex;
-  gap: 4px;
+  gap: 8px;
 }
 .header__menu__item {
   padding: 8px 16px;
@@ -127,6 +127,9 @@ button:focus {
   border: 3px solid var(--color-accent);
   /* 이미지가 부모 요소의 크기에 맞춰 비율을 유지함녀서 꽉차도록 설정 */
   object-fit: cover;
+}
+.home__box {
+  border: 1px solid var(--color-black);
 }
 .home__title {
   font-size: 3rem;

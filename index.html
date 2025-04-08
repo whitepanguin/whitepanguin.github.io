@@ -28,25 +28,26 @@
     <header class="header">
       <div class="header__logo">
         <img class="header__logo__img" src="./images/profile.ico" alt="Logo" />
-        <h1 class="header__logo_title"><a href="#home">JYL</a></h1>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li><a href="#home" class="header__menu__item active">홈</a></li>
+            <li><a href="#about" class="header__menu__item">JYL</a></li>
+            <li><a href="#skills" class="header__menu__item">기술</a></li>
+            <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
+            <li><a href="best-eat.html" class="header__menu__item">음식추천</a></li>
+            <li><a href="resume.html" class="header__menu__item">이력서</a></li>
+            <li><a href="login.html" class="header__menu__item">로그인</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li><a href="#home" class="header__menu__item active">홈</a></li>
-          <li><a href="#about" class="header__menu__item">JYL</a></li>
-          <li><a href="#skills" class="header__menu__item">기술</a></li>
-          <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
-          <li><a href="best-eat.html" class="header__menu__item">음식추천</a></li>
-          <li><a href="resume.html" class="header__menu__item">이력서</a></li>
-          <li><a href="login.html" class="header__menu__item">로그인</a></li>
-        </ul>
-      </nav>
+      
     </header>
     <!-- Header 끝 -->
     <!-- Main 시작 -->
     <main>
       <!-- Home 시작 -->
       <section id="home">
+        <div class="home__box">
         <img
           class="home__avatar"
           src="./images/profile.jpg"
@@ -60,6 +61,7 @@
           꿈을 꾸는 AI 개발자 재용입니다.
         </p>
         <a class="home__contact" href="#contact">연락처</a>
+      </div>
       </section>
       <!-- Home 끝 -->
       <!-- about 시작 -->
