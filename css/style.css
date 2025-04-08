@@ -1,0 +1,256 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global 변수 */
+:root {
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+
+  /* colors */
+  --color-white: #fff;
+  --color-black: #050a13;
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
+
+  /* size */
+  --size-max-width: 1200px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "GowunDodum-Regular";
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+button {
+  /* 요소의 배경색을 투명하게 설정 */
+  background-color: transparent;
+  /* 버튼의 안쪽 태두리 없애기 */
+  outline: 0;
+  border: 0;
+}
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+.section {
+  padding: 4rem;
+  text-align: center;
+}
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+/* header */
+.header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+.header__logo_title {
+  font-size: 1.8rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+.header__menu__item {
+  padding: 8px 16px;
+}
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+.header__menu__item:active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+}
+
+/* Home */
+#home {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  padding: 7rem 1rem 5rem;
+  text-align: center;
+}
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 3px solid var(--color-accent);
+  /* 이미지가 부모 요소의 크기에 맞춰 비율을 유지함녀서 꽉차도록 설정 */
+  object-fit: cover;
+}
+.home__title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.home__title--string {
+  color: var(--color-accent);
+}
+.home__description {
+  font-size: 1.5rem;
+}
+.home__contact {
+  /* block을 인라인화 시킬수 있다. */
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-black);
+  margin: 2rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.home__contact:hover {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 2px solid var(--color-accent);
+}
+
+/* about */
+.skills {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.5rem 0;
+}
+.skill {
+  background-color: var(--color-primary-variant);
+  padding: 2rem 1rem;
+  color: var(--color-text);
+  border-radius: 1rem;
+  /* 기본 화살표로 만들어두기 */
+  cursor: default;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
+}
+.skill__icon {
+  font-size: 4rem;
+  margin: 1rem 0;
+  color: var(--color-accent);
+  transition: all 300ms ease;
+}
+.skill:hover .skill__icon {
+  transform: rotate(-15deg) scale(1.2);
+}
+.skill__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.jobs {
+  /* 언어에 따라서 시작위치를 다르게 설정 */
+  text-align: start;
+}
+.job {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+.job__img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid var(--color-black);
+}
+.job__name {
+  color: var(--color-primary);
+}
+.job__period {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+/* skills */
+#skills {
+  background-color: var(--color-primary-variant);
+  color: var(--color-text);
+}
+.tools {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  margin: 2rem 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.tools__title {
+  color: var(--color-accent);
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+.tools__coding {
+  /* 2개의 행을 차지하도록 설정 */
+  grid-row: span 2;
+  padding: 1rem;
+  background-color: var(--color-primary);
+}
+.bar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.5rem;
+}
+.bar__metadata {
+  display: flex;
+  justify-content: space-between;
+}
+.bar__bg {
+  width: 100%;
+  height: 3px;
+  background-color: var(--color-primary-variant);
+}
+.bar__value {
+  height: 3px;
+  background-color: var(--color-accent);
+}
+.tools__tools {
+  padding: 1rem;
+}
+.tools__etc {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  filter: brightness(150%);
+}
