@@ -15,10 +15,10 @@
 
   /* colors */
   --color-white: #fff;
-  --color-black: #050a13;
-  --color-blue: #03e8f9;
+  --color-black: #113370;
+  --color-blue: #20f903;
   --color-orange: #fd6413;
-  --color-gray: #1b1e26;
+  --color-gray: #274db6;
 
   /* size */
   --size-max-width: 1200px;
@@ -89,6 +89,8 @@ button:focus {
   gap: 8px;
 }
 .header__logo__img {
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
   width: 36px;
   height: 36px;
 }
@@ -168,6 +170,14 @@ button:focus {
   cursor: default;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.4);
 }
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 30px rgba(255, 215, 0, 1);
+  }
+}
 .skill__icon {
   font-size: 4rem;
   margin: 1rem 0;
@@ -176,6 +186,12 @@ button:focus {
 }
 .skill:hover .skill__icon {
   transform: rotate(-15deg) scale(1.2);
+}
+.skill:hover .skill__title {
+  animation: glow 2s infinite alternate;
+}
+.skill:hover .skill__p {
+  color: var(--color-accent);
 }
 .skill__title {
   font-size: 1.5rem;
@@ -253,4 +269,7 @@ button:focus {
   padding: 1rem;
   background-color: var(--color-primary);
   filter: brightness(150%);
+}
+.tools_hover:hover {
+  transform: scale(1.5);
 }
