@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+
+  /* colors */
+  --color-white: #fff;
+  --color-black: #113370;
+  --color-blue: #20f903;
+  --color-orange: #fd6413;
+  --color-gray: #274db6;
+
+  /* size */
+  --size-max-width: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "GowunDodum-Regular";
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+button {
+  /* 요소의 배경색을 투명하게 설정 */
+  background-color: transparent;
+  /* 버튼의 안쪽 태두리 없애기 */
+  outline: 0;
+  border: 0;
+}
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+.section {
+  padding: 4rem;
+  text-align: center;
+}
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+/* header */
+.header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header__logo__img {
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.header__logo_title {
+  font-size: 1.8rem;
+}
+
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+.header__menu__item {
+  padding: 8px 16px;
+}
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+.active {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 1px solid var(--color-accent);
+}
+.header__menu__item:active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+}
+main {
+  max-width: 600px;
+  /* 가운데 정렬 위아래 0, 좌우 auto  */
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  /* 가로(오른쪽) 세로(아래) 번짐 정도(뿌옇게), 색상(빨초파 연함도) */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 200px;
+}
+form {
+  /* 폼 안에 flex 시키겠다 열로 나열하겠다 */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  padding-left: 5px;
+}
+input,
+select,
+textarea,
+button {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+}
+.form-group.inline {
+  display: flex;
+  /* 위아래 정령 */
+  align-items: center;
+  gap: 10px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+button[type="submit"] {
+  background-color: #27667b;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  /* 아래 작용을 천천히 작용시킨다. */
+  transition: background-color 0.3s ease;
+}
+button[type="submit"]:hover {
+  background-color: #201646;
+}
+.footer-text {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 20px;
+  color: #777;
+}
+.box {
+  border: 2px solid #a0c878;
+  padding: 5px;
+}
+.remember {
+  position: relative;
+  left: 370px;
+}

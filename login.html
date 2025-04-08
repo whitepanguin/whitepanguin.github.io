@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="./css/login_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo__img" src="./images/profile.ico" alt="Logo" />
+        <h1 class="header__logo_title"><a href="index.html">JYL</a></h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__menu__item">홈</a></li>
+          <li><a href="index.html#about" class="header__menu__item">JYL</a></li>
+          <li>
+            <a href="index.html#skills" class="header__menu__item">기술</a>
+          </li>
+          <li>
+            <a href="index.html#work" class="header__menu__item">포트폴리오</a>
+          </li>
+          <li>
+            <a href="best-eat.html" class="header__menu__item">음식추천</a>
+          </li>
+          <li><a href="resume.html" class="header__menu__item">이력서</a></li>
+          <li>
+            <a href="signup.html" class="header__menu__item active">회원가입</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="/signin" method="post">
+        <div class="box">
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input
+              type="email"
+              maxlength="100"
+              name="email"
+              id="email"
+              placeholder="이메일"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userpw">비밀번호</label>
+            <input
+              type="password"
+              maxlength="20"
+              name="userpw"
+              id="userpw"
+              placeholder="비밀번호"
+            />
+          </div>
+          <div class="form-group">
+            <div class="remember">
+              <input type="checkbox" id="rememb" name="rememb" />
+              <label for="rememb">아이디 기억하기</label>
+            </div>
+          </div>
+        </div>
+        <button type="submit">로그인</button>
+        <p>비밀번호를 잊으셨나요? <a href="#">비밀번호 찾기</a></p>
+      </form>
+    </main>
+    <footer class="footer-text">
+      <p>Copyright &copy; 2025 My Website</p>
+    </footer>
+  </body>
+</html>

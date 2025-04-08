@@ -153,6 +153,11 @@ button:focus {
   color: var(--color-text);
   outline: 2px solid var(--color-accent);
 }
+.active {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 1px solid var(--color-accent);
+}
 
 /* about */
 .skills {

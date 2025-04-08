@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>signup</title>
+    <link rel="stylesheet" href="./css/signup_style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo__img" src="./images/profile.ico" alt="Logo" />
+        <h1 class="header__logo_title"><a href="index.html">JYL</a></h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a href="index.html" class="header__menu__item">홈</a></li>
+          <li><a href="index.html#about" class="header__menu__item">JYL</a></li>
+          <li>
+            <a href="index.html#skills" class="header__menu__item">기술</a>
+          </li>
+          <li>
+            <a href="index.html#work" class="header__menu__item">포트폴리오</a>
+          </li>
+          <li>
+            <a href="best-eat.html" class="header__menu__item">음식추천</a>
+          </li>
+          <li><a href="resume.html" class="header__menu__item">이력서</a></li>
+          <li>
+            <a href="login.html" class="header__menu__item active">로그인</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="/signup" method="post">
+        <div class="box">
+          <div class="form-group">
+            <label for="userid">아이디</label>
+            <input
+              type="text"
+              maxlength="20"
+              name="userid"
+              id="userid"
+              placeholder="아이디"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userpw">비밀번호</label>
+            <input
+              type="password"
+              maxlength="20"
+              name="userpw"
+              id="userpw"
+              placeholder="비밀번호"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">이메일</label>
+            <input
+              type="email"
+              maxlength="100"
+              name="email"
+              id="email"
+              placeholder="이메일을 입력하세요"
+            />
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="form-group">
+            <label for="username">이름</label>
+            <input
+              type="text"
+              maxlength="20"
+              name="username"
+              id="username"
+              placeholder="이름"
+            />
+          </div>
+          <div class="form-group">
+            <label for="birth">생년월일</label>
+            <input type="date" name="birth" id="birth" />
+          </div>
+          <div class="form-group">
+            <label for="region">통신사</label>
+            <select name="region" id="region">
+              <option value="">통신사 선택</option>
+              <option value="SKT">SKT</option>
+              <option value="KT">KT</option>
+              <option value="LG_U+">LG U+</option>
+              <option value="SKT_R">SKT 알뜰폰</option>
+              <option value="KT_R">KT 알뜰폰</option>
+              <option value="LG_U+_R">LG U+ 알뜰폰</option>
+            </select>
+          </div>
+          <div class="radio">
+            <div class="form-group box2">
+              <label
+                >남자<input type="radio" name="gender" id="male" value="남"
+              /></label>
+              <label
+                >여자<input type="radio" name="gender" id="female" value="여" />
+              </label>
+            </div>
+            <div class="form-group box2">
+              <label
+                >내국인<input
+                  type="radio"
+                  name="born"
+                  id="korean"
+                  value="내국인"
+                  checked
+              /></label>
+              <label
+                >외국인<input
+                  type="radio"
+                  name="born"
+                  id="other"
+                  value="외국인"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="form-group">
+            <label for="hp">휴대전화번호</label>
+            <input
+              type="tel"
+              maxlength="11"
+              name="hp"
+              id="hp"
+              placeholder="휴대전화번호"
+            />
+          </div>
+        </div>
+        <div class="box">
+          <div class="form-group">
+            <div class="arrowbox">
+              <input type="checkbox" id="agreed" name="agree" />
+              <label for="agreed">인증 약관 전체동의</label>
+            </div>
+            <fieldset class="show">
+              <div class="sq1">
+                <input type="checkbox" id="1" name="agree" value="1" />
+                <label for="1">개인정보 이용 ></label>
+              </div>
+              <div class="sq2">
+                <input type="checkbox" id="2" name="agree" value="html" />
+                <label for="2">고유식별정보 처리 ></label>
+              </div>
+              <div class="sq3">
+                <input type="checkbox" id="3" name="agree" value="html" />
+                <label for="3">통신사 이용약관 ></label>
+              </div>
+              <div class="sq4">
+                <input type="checkbox" id="4" name="agree" value="html" />
+                <label for="4">인증사 이용약관 ></label>
+              </div>
+              <div class="sq5">
+                <input type="checkbox" id="5" name="agree" value="html" />
+                <label for="5">네이버 개인정보수집 ></label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <button type="submit">회원가입</button>
+        <p>이미 계정이 있으신가요 <a href="./login.html">로그인</a></p>
+      </form>
+    </main>
+    <div class="question-fix">
+      <a href="#">
+        <img
+          class="question"
+          src="images/question-solid.svg"
+          alt="question"
+          width="30px"
+          height="30px"
+        />
+      </a>
+    </div>
+    <footer class="footer-text">
+      <p>Copyright &copy; 2025 My Website</p>
+    </footer>
+  </body>
+</html>

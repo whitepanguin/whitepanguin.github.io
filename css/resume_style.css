@@ -1,0 +1,363 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global 변수 */
+:root {
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+
+  /* colors */
+  --color-white: #fff;
+  --color-black: #113370;
+  --color-blue: #20f903;
+  --color-orange: #fd6413;
+  --color-gray: #274db6;
+
+  /* size */
+  --size-max-width: 1200px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "GowunDodum-Regular";
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+button {
+  /* 요소의 배경색을 투명하게 설정 */
+  background-color: transparent;
+  /* 버튼의 안쪽 태두리 없애기 */
+  outline: 0;
+  border: 0;
+}
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+.section {
+  padding: 4rem;
+  text-align: center;
+}
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+/* header */
+.header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header__logo__img {
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.header__logo_title {
+  font-size: 1.8rem;
+}
+.active {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 1px solid var(--color-accent);
+}
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+.header__menu__item {
+  padding: 8px 16px;
+}
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+.header__menu__item:active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 6fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ddeb9d;
+  height: 1170px;
+  margin-top: 90px;
+}
+section {
+  background-color: ivory;
+  padding: 10px;
+  border-radius: 6px;
+}
+article {
+  margin-bottom: 20px;
+  display: grid;
+  background-color: ivory;
+  grid-template-areas:
+    "fir sec"
+    "thir for"
+    "fit six"
+    "sev eig";
+  /* 앞 200px 고정 그리고 나머지 */
+  grid-template-columns: 1fr 1.5fr;
+  /* 위 중앙(나머지) 아래 순으로 높이를 정한다 */
+  grid-template-rows: 1fr 1.5fr 1fr 1fr;
+  /* 100vh = 100%라고 보면 된다(세로 전용)*/
+  height: 100vh;
+}
+
+.fir {
+  grid-area: fir;
+  background-color: lightgray;
+  padding: 20px;
+}
+.sec {
+  grid-area: sec;
+  background-color: ivory;
+  padding: 20px;
+}
+.thir {
+  grid-area: thir;
+  background-color: lightgray;
+  padding: 20px;
+}
+.for {
+  grid-area: for;
+  background-color: ivory;
+  padding: 20px;
+}
+.fit {
+  grid-area: fit;
+  background-color: lightgray;
+  padding: 20px;
+}
+.six {
+  grid-area: six;
+  background-color: ivory;
+  padding: 20px;
+}
+.sev {
+  grid-area: sev;
+  background-color: lightgray;
+  padding: 20px;
+}
+.eig {
+  grid-area: eig;
+  background-color: ivory;
+  padding: 20px;
+}
+.img {
+  box-sizing: border-box;
+  width: 150px;
+  height: 200px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.self {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.selfinto1 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.selfinto2 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+}
+.wo {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 4px;
+}
+.wodata {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.woname {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+}
+.program {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.programename {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.programedate {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+}
+.school {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.schooldate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.schoolname {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+}
+.hist {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.histdate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.histname {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+}
+.work {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  grid-template-rows: 30px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+.workdate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.workname {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1rem;
+}
+.box {
+  text-align: left;
+}
+article h2 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+article h1 {
+  font-size: 40px;
+}
+.sec p {
+  margin: 20px 5px;
+}
+
+aside {
+  background-color: #a0c878;
+  padding: 20px;
+  border-radius: 8px;
+  height: 30vh;
+}
+aside a {
+  color: #333;
+  /* 밑줄 사라지게 */
+  text-decoration: none;
+  font-weight: bold;
+}
+aside a:hover {
+  color: rgb(243, 116, 116);
+  /* 밑줄 사라지게 */
+  text-decoration: none;
+}
+
+footer {
+  background-color: #143d60;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}

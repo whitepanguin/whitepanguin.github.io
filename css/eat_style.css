@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global 변수 */
+:root {
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+
+  /* colors */
+  --color-white: #fff;
+  --color-black: #113370;
+  --color-blue: #20f903;
+  --color-orange: #fd6413;
+  --color-gray: #274db6;
+
+  /* size */
+  --size-max-width: 1200px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "GowunDodum-Regular";
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+button {
+  /* 요소의 배경색을 투명하게 설정 */
+  background-color: transparent;
+  /* 버튼의 안쪽 태두리 없애기 */
+  outline: 0;
+  border: 0;
+}
+button:focus {
+  outline: 1px solid var(--color-accent);
+}
+.section {
+  padding: 4rem;
+  text-align: center;
+}
+.max-container {
+  max-width: var(--size-max-width);
+  margin: auto;
+}
+.title {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.description {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+/* header */
+.header {
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.header__logo__img {
+  border: 1px solid var(--color-text);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.header__logo_title {
+  font-size: 1.8rem;
+}
+.active {
+  background-color: transparent;
+  color: var(--color-text);
+  outline: 1px solid var(--color-accent);
+}
+.header__menu {
+  display: flex;
+  gap: 4px;
+}
+.header__menu__item {
+  padding: 8px 16px;
+}
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+.header__menu__item:active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
+}
+
+main {
+  font-family: "Ownglyph_ParkDaHyun";
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--color-black);
+  margin-top: 100px;
+}
+.box > p {
+  text-align: right;
+  font-size: 14px;
+  padding: 10px;
+}
+.word {
+  width: 40%;
+  height: 400px;
+  border: 1px solid silver;
+}
+
+.background1 {
+  width: 60%;
+  height: 400px;
+  border: 1px solid silver;
+  background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDExMTZfMTI2%2FMDAxNzMxNzM5OTI3NjEw.0HP2To_IhHGUu49TBBs40G9K9ONYppxsJSNgbE6648cg.DPto5vNWnE9T-9jaLrIGXIe1Ca0tQG4d4MpZyYcDAV8g.JPEG%2FIMG_3368.jpg)
+    no-repeat center/cover;
+  position: relative;
+}
+.background2 {
+  width: 60%;
+  height: 400px;
+  border: 1px solid silver;
+  background: url(https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTAxMjJfMTgg%2FMDAxNzM3NTE1NjEzODIw.HJeyGeiFafl-gASXMYxaWA2pOQtgF-rp5yQKGPcgPvkg.S3r5pko_hsHqfV33l5SNjyDiHSahPuPZQ2o997Fs2AUg.JPEG%2FN0005971.JPG)
+    no-repeat center/cover;
+  position: relative;
+}
+.background3 {
+  width: 60%;
+  height: 400px;
+  border: 1px solid silver;
+  background: url(https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNTA0MDJfMTQx%2FMDAxNzQzNTIyNDY1Njc0.rYf0UVfbGX6ZmviAIEXbw7tqNYwf1rdEzFXP99OeZ5wg.WHkeda7KjHRfgC_DFWDU9cBtmtfONukZtuPMTS_m_Lwg.JPEG%2FA45FBA92-86E0-4180-944F-F37B180DFB61.jpeg%3Ftype%3Dw1500_60_sharpen)
+    no-repeat center/cover;
+  position: relative;
+}
+.background4 {
+  width: 60%;
+  height: 400px;
+  border: 1px solid silver;
+  background: url(https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNTAzMDlfMjUz%2FMDAxNzQxNDUxMjAzNzU4._QSoRGGczxtiwTNrC3iWh1AB2Y_fQz5U0ZKvif-rDQcg.W7RrutT0j2iRTX8d6DUiCmvxW3-ArQlNSu7bu3lMLY8g.JPEG%2F2C07B8F4-7682-41EA-B0BB-905538F863D8.jpeg%3Ftype%3Dw1500_60_sharpen)
+    no-repeat center/cover;
+  position: relative;
+}
+.background5 {
+  width: 60%;
+  height: 400px;
+  border: 1px solid silver;
+  background: url(https://search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEyMjhfMTIg%2FMDAxNzM1Mzc5MjM0Mjkz.Y1lfVUSqIgZz0RDnftG3hb311gsWjOQOZMX7Q7zskDUg.WsiktP5WyNBS8UBuwCMdcMUzDM0wu-OjCl6otyj7rvcg.JPEG%2F1000126472.jpg.jpg%3Ftype%3Dw1500_60_sharpen)
+    no-repeat center/cover;
+  position: relative;
+}
+.name1,
+.name2,
+.name3,
+.name4,
+.name5 {
+  cursor: pointer;
+  position: absolute;
+  left: 3%;
+  bottom: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(80, 4, 167);
+  background-color: rgba(255, 228, 196, 0.4);
+}
+.name1:hover,
+.name2:hover,
+.name3:hover,
+.name4:hover,
+.name5:hover {
+  cursor: pointer;
+  position: absolute;
+  left: 3%;
+  bottom: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(4, 167, 159);
+}
+.place {
+  margin-bottom: 20px;
+}
+.place a {
+  text-decoration: none;
+  color: rgb(255, 115, 0);
+}
+.place a:hover {
+  text-decoration: none;
+  color: skyblue;
+}
+.word {
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+.review {
+  text-align: left;
+}
+.place {
+  margin-top: 30px;
+}
+section {
+  background-color: ivory;
+  padding: 10px;
+  border-radius: 6px;
+}
+.box {
+  width: 100%;
+  height: 400px;
+  border: 1px solid silver;
+  margin-bottom: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+}
+footer {
+  background-color: #143d60;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+.info-block p {
+  padding-bottom: 10px;
+}
+.info-block h2 {
+  padding-bottom: 10px;
+}
+/* 화면 너비가 1024px 이상일 때 (데스크톱) */
+@media (min-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .place {
+    padding: 0;
+    margin: 0;
+  }
+  article {
+    display: flex;
+    /* 양쪽 정렬, 끝은 좀금 여백 남기고 */
+    /* 줄바꿈 속성이다 */
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 요소 사이 간격 (선택사항) */
+  }
+  .box {
+    /* width: 48%; */
+    width: calc(25% - 10px);
+    /* display: flex;
+    flex-direction: column; 세로 방향으로 배치 높이 자동 조정 */
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 배치 */ /* 높이 자동 조정 */
+    height: 600px;
+  }
+  .background1,
+  .background2,
+  .background3,
+  .background4,
+  .background5 {
+    width: 100%; /* 적절한 높이로 줄이기 */
+  }
+
+  .word {
+    width: 100%;
+  }
+}
+/* 화면 너비가 768px 이상 1023px 이하일 때 (태블릿) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  article {
+    display: flex;
+    /* 양쪽 정렬, 끝은 좀금 여백 남기고 */
+    /* 줄바꿈 속성이다 */
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .box {
+    /* width: 48%; */
+    width: calc(48% - 10px);
+    display: flex;
+    flex-direction: column; /* 세로 방향으로 배치 */ /* 높이 자동 조정 */
+    height: 600px;
+  }
+  .background1,
+  .background2,
+  .background3,
+  .background4,
+  .background5 {
+    width: 100%;
+    height: 500px; /* 적절한 높이로 줄이기 */
+  }
+
+  .word {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .place {
+    padding: 0;
+    margin: 0;
+  }
+  .box {
+    height: 500px;
+  }
+  .background1,
+  .background2,
+  .background3,
+  .background4,
+  .background5 {
+    height: 500px;
+  }
+  .word {
+    height: 500px;
+  }
+}
