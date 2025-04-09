@@ -8,9 +8,15 @@
     <meta name="author" content="JYL" />
     <!-- 소셜 미니어 공유용 메타 태그(Open Graph) -->
     <meta property="og:title" content="재용의 포트폴리오" />
+    <meta property="og:locale" content="ko_KR" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="배포후 생성된 URL" />
-    <meta property="og:image" content="배포후 생성된 이미지 URL" />
+    <meta property="og:site_name" content="JYL's Website" />
+    <meta property="og:url" content="https://whiteraaccoon.github.io/" />
+    <meta property="og:description" content="안녕하세요! 재용입니다." />
+    <meta
+      property="og:image"
+      content="https://whiteraaccoon.github.io/images/profile.ico"
+    />
     <link
       rel="shortcut icon"
       href="./images/profile.ico"
@@ -34,42 +40,42 @@
             <li><a href="#about" class="header__menu__item">JYL</a></li>
             <li><a href="#skills" class="header__menu__item">기술</a></li>
             <li><a href="#work" class="header__menu__item">포트폴리오</a></li>
-            <li><a href="best-eat.html" class="header__menu__item">음식추천</a></li>
+            <li>
+              <a href="best-eat.html" class="header__menu__item">음식추천</a>
+            </li>
             <li><a href="resume.html" class="header__menu__item">이력서</a></li>
             <li><a href="login.html" class="header__menu__item">로그인</a></li>
           </ul>
         </nav>
       </div>
-      
     </header>
     <!-- Header 끝 -->
     <!-- Main 시작 -->
     <main>
       <!-- Home 시작 -->
       <section id="home">
-        <div class="home__box">
         <img
           class="home__avatar"
           src="./images/profile.jpg"
           alt="JYL's profile"
         />
-        <h2 class="home__title">
-          안녕하세요.<br />
-          <strong class="home__title--string">이재용</strong>입니다.
-        </h2>
-        <p class="home__description">
-          꿈을 꾸는 AI 개발자 재용입니다.
-        </p>
-        <a class="home__contact" href="#contact">연락처</a>
-      </div>
+        <div class="home__box">
+          <h2 class="home__title">
+            안녕하세요.
+            <strong class="home__title--string">이재용</strong>입니다.
+          </h2>
+          <p class="home__description">꿈을 꾸는 AI 개발자 재용입니다.</p>
+        </div>
       </section>
       <!-- Home 끝 -->
       <!-- about 시작 -->
       <section id="about" class="section max-container">
-        <h2 class="title">이재용</h2>
-        <p class="description">
-          나를 정의 하는 몇가지 단어들: 97년생, 호주, 게임, AI, 취사병, EDM
-        </p>
+        <div class="about__word">
+          <h2 class="title">이재용</h2>
+          <p class="description">
+            나를 정의 하는 몇가지 단어들: 97년생, 호주, 게임, AI, 취사병, EDM
+          </p>
+        </div>
         <ul class="skills">
           <li class="skill">
             <i class="fa-brands fa-html5 skill__icon"></i>
@@ -86,22 +92,29 @@
             <p class="skill__title">AI</p>
             <p class="skill__p">Tensorflow, Python, Pytorch, Numpy</p>
           </li>
-        </ul>
-        <ul class="jobs">
-          <li class="job">
-            <img class="job__img" src="./images/naver.png" alt="Naver Logo" />
-            <div>
-              <p class="job__name">네이버 시스템 엔지니어</p>
-            </div>
-          </li>
-          <li class="job">
-            <img class="job__img" src="./images/hd.png" alt="Hd Logo" />
-            <div>
-              <p class="job__name">현대자동차 자율주행 설계</p>
-            </div>
+          <li class="skill">
+            <i class="fa-solid fa-rocket skill__icon"></i>
+            <p class="skill__title">AI</p>
+            <p class="skill__p">Tensorflow, Python, Pytorch, Numpy</p>
           </li>
         </ul>
-        <p>이 두 회사를 꿈꾸고 있습니다. 😁</p>
+        <div class="about__job">
+          <ul class="jobs">
+            <li class="job">
+              <img class="job__img" src="./images/naver.png" alt="Naver Logo" />
+              <div>
+                <p class="job__name">네이버 시스템 엔지니어</p>
+              </div>
+            </li>
+            <li class="job">
+              <img class="job__img" src="./images/hd.png" alt="Hd Logo" />
+              <div>
+                <p class="job__name">현대자동차 자율주행 설계</p>
+              </div>
+            </li>
+          </ul>
+          <p>이 두 회사를 꿈꾸고 있습니다. 😁</p>
+        </div>
       </section>
       <!-- about 끝 -->
       <!-- skills 시작 -->
@@ -110,7 +123,8 @@
           <h2 class="title">기술</h2>
           <p class="description">언어 및 도구</p>
           <p>
-            언어는 다양하게 배우고 있습니다. 기초적인 언어인 HTML, Java, JavaScript, C+, Python를 가볍게 다루고 있습니다.
+            언어는 다양하게 배우고 있습니다. 기초적인 언어인 HTML, Java,
+            JavaScript, C+, Python를 가볍게 다루고 있습니다.
           </p>
           <div class="tools">
             <section class="tools__coding">
@@ -184,143 +198,7 @@
       </section>
       <!-- skills 끝 -->
       <!-- work 시작 -->
-      <section id="work">
-        <h2>포트폴리오</h2>
-        <p>Projects</p>
-        <ul>
-          <li>
-            <button>All<span>10</span></button>
-          </li>
-          <li>
-            <button>Front-end<span>3</span></button>
-          </li>
-          <li>
-            <button>Mobile<span>3</span></button>
-          </li>
-          <li>
-            <button>AI<span>4</span></button>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="#" target="_blank">
-              <img src="./images/Tmap.jpg" alt="project 이미지" />
-              <div>
-                <h3>Project #1</h3>
-                <p>티맵</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-    </div>
-      </section>
-      <!-- work 끝 -->
-      <!-- license 시작 -->
-      <section id="license">
-        <h2>자격증</h2>
-        <p>국가 기술 자격증</p>
-        <ul>
-          <li>
-            <img src="./images/license.png" alt="정보처리기사 자격증" />
-            <div>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Praesentium quasi reiciendis delectus corporis vitae veritatis
-                consectetur deleniti. Quam tempora repellat et magnam minus,
-                autem odit, optio repellendus accusamus, atque quis?
-              </p>
-              <p><a href="#">산업인력공단</a></p>
-            </div>
-          </li>
-          <li>
-            <img src="./images/license.png" alt="데이터분석기사 자격증" />
-            <div>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Praesentium quasi reiciendis delectus corporis vitae veritatis
-                consectetur deleniti. Quam tempora repellat et magnam minus,
-                autem odit, optio repellendus accusamus, atque quis?
-              </p>
-              <p><a href="#">한국데이터산업진흥원</a></p>
-            </div>
-          </li>
-          <li>
-            <img src="./images/license.png" alt="ADSP 자격증" />
-            <div>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Praesentium quasi reiciendis delectus corporis vitae veritatis
-                consectetur deleniti. Quam tempora repellat et magnam minus,
-                autem odit, optio repellendus accusamus, atque quis?
-              </p>
-              <p><a href="#">한국데이터산업진흥원</a></p>
-            </div>
-          </li>
-        </ul>
-      </section>
+
       <!-- license 끝 -->
       <!-- Arrow Up 시작 -->
       <aside>
