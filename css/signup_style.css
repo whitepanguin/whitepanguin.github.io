@@ -163,7 +163,7 @@ fieldset {
   grid-template-areas:
     "1 2"
     "3 4"
-    "5";
+    "5 0";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   border: 1px solid #ccc;
@@ -235,4 +235,13 @@ button[type="submit"]:hover {
   border: 2px solid #333;
   background-color: lightseagreen;
   border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .header__menu {
+    display: flex;
+    gap: 3px;
+  }
+  .header__menu__item {
+    padding: 8px 6px;
+  }
 }

@@ -172,7 +172,6 @@ button:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  width: 500px;
   justify-content: center;
   align-items: center;
 }
@@ -259,10 +258,6 @@ button:focus {
   color: var(--color-primary);
   margin-left: 5px;
 }
-.job__period {
-  color: var(--color-primary);
-  font-size: 0.8rem;
-}
 /* skills */
 #skills {
   background-color: var(--color-primary-variant);
@@ -322,4 +317,70 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 20px;
+}
+/* 화면 너비가 1024px 이상일 때 (데스크톱) */
+@media (min-width: 1024px) {
+  /* body {
+    background-color: gold;
+  } */
+}
+/* 화면 너비가 768px 이상 1023px 이하일 때 (태블릿) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* body {
+    background-color: aqua;
+  } */
+}
+/* 화면 너비가 767px 이하일 때 (모바일) */
+@media (max-width: 767px) {
+  /* body {
+    background-color: deeppink;
+  } */
+  * {
+    font-size: 50%;
+    font-weight: 300;
+  }
+  .header__menu {
+    display: flex;
+    gap: 3px;
+  }
+  .header__menu__item {
+    padding: 8px 6px;
+  }
+  .home__box {
+    width: 200px;
+    padding: 10px;
+  }
+  .home__title--string {
+    font-size: 2rem;
+  }
+  .home__description {
+    font-size: 1.5rem;
+  }
+  .description {
+    font-size: 2rem;
+  }
+  .des__span {
+    font-size: 2rem;
+  }
+  .about__word {
+    width: 100%;
+    height: 100px;
+  }
+  .jobs {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .job__img {
+    width: 150px;
+    height: 150px;
+    border: 1px solid var(--color-black);
+  }
+  .job__name {
+    color: var(--color-primary);
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  #contact {
+    font-size: 30px;
+  }
 }

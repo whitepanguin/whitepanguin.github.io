@@ -333,21 +333,28 @@ footer {
   }
 }
 @media (max-width: 768px) {
+  .header__menu {
+    display: flex;
+    gap: 3px;
+  }
+  .header__menu__item {
+    padding: 8px 6px;
+  }
   .place {
     padding: 0;
     margin: 0;
   }
   .box {
-    height: 500px;
+    height: 600px;
   }
   .background1,
   .background2,
   .background3,
   .background4,
   .background5 {
-    height: 500px;
+    height: 600px;
   }
   .word {
-    height: 500px;
+    height: 600px;
   }
 }
