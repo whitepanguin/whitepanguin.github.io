@@ -71,6 +71,9 @@ button:focus {
   font-size: 1.5rem;
   margin: 0.5rem 0;
 }
+.description span {
+  color: deepskyblue;
+}
 /* header */
 .header {
   background-color: var(--color-primary);
@@ -157,19 +160,18 @@ button:focus {
 #about {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 .about__word {
-  width: 400px;
-}
-.about__job {
+  width: 300px;
+  height: 300px;
 }
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
-  margin: 2.5rem 0;
-  border: 1px solid var(--color-black);
+  gap: 4px;
   width: 500px;
   justify-content: center;
   align-items: center;
@@ -192,6 +194,25 @@ button:focus {
     text-shadow: 0 0 30px rgba(255, 215, 0, 1);
   }
 }
+@keyframes popUp {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.skillbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .skill__icon {
   font-size: 4rem;
   margin: 1rem 0;
@@ -203,6 +224,7 @@ button:focus {
 }
 .skill:hover .skill__title {
   animation: glow 2s infinite alternate;
+  color: var(--color-accent-variant);
 }
 .skill:hover .skill__p {
   color: var(--color-accent);
@@ -215,12 +237,18 @@ button:focus {
 .jobs {
   /* 언어에 따라서 시작위치를 다르게 설정 */
   text-align: start;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
 }
 .job {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
   margin-bottom: 1rem;
+}
+.job:hover .job__name {
+  animation: popUp 2s infinite alternate;
 }
 .job__img {
   width: 200px;
@@ -229,6 +257,7 @@ button:focus {
 }
 .job__name {
   color: var(--color-primary);
+  margin-left: 5px;
 }
 .job__period {
   color: var(--color-primary);
@@ -286,4 +315,11 @@ button:focus {
 }
 .tools_hover:hover {
   transform: scale(1.5);
+}
+footer {
+  background-color: #143d60;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
 }
