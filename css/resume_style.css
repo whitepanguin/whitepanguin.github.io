@@ -361,12 +361,57 @@ footer {
   padding: 20px;
   margin-top: 20px;
 }
-@media (max-width: 768px) {
+/* 화면 너비가 1024px 이상일 때 (데스크톱) */
+@media (min-width: 1024px) {
+  /* body {
+    background-color: gold;
+  } */
+}
+/* 화면 너비가 768px 이상 1023px 이하일 때 (태블릿) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* body {
+    background-color: aqua;
+  } */
+  main {
+    grid-template-columns: 1fr;
+    height: 1180px;
+  }
+  aside {
+    display: none;
+  }
+}
+/* 화면 너비가 767px 이하일 때 (모바일) */
+@media (max-width: 767px) {
+  /* body {
+    background-color: deeppink;
+  } */
   .header__menu {
     display: flex;
     gap: 3px;
   }
   .header__menu__item {
     padding: 8px 6px;
+  }
+  main {
+    grid-template-columns: 1fr;
+    height: 2200px;
+  }
+  aside {
+    display: none;
+  }
+  article {
+    grid-template-areas:
+      "fir "
+      " sec"
+      "thir "
+      " for"
+      "fit "
+      " six"
+      "sev "
+      " eig";
+    grid-template-columns: 1fr;
+    /* 위 중앙(나머지) 아래 순으로 높이를 정한다 */
+    grid-template-rows: auto;
+    /* 100vh = 100%라고 보면 된다(세로 전용)*/
   }
 }

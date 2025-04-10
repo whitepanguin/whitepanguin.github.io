@@ -383,4 +383,10 @@ footer {
   #contact {
     font-size: 30px;
   }
+  .tools {
+    grid-template-columns: auto;
+  }
+  .tools__coding {
+    width: 100%;
+  }
 }
