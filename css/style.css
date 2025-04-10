@@ -389,4 +389,10 @@ footer {
   .tools__coding {
     width: 100%;
   }
+  .skills {
+    flex-direction: column;
+  }
+  .skill {
+    width: 100%;
+  }
 }
