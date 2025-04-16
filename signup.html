@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signup</title>
     <link rel="stylesheet" href="./css/signup_style.css" />
+    <script src="./js/signup.js"></script>
   </head>
   <body>
     <header class="header">
@@ -32,7 +33,7 @@
       </nav>
     </header>
     <main>
-      <form action="/signup" method="post">
+      <form action="/signup" method="post" onsubmit="return sendit()">
         <div class="box">
           <div class="form-group">
             <label for="userid">아이디</label>
@@ -52,6 +53,16 @@
               name="userpw"
               id="userpw"
               placeholder="비밀번호"
+            />
+          </div>
+          <div class="form-group">
+            <label for="userpw_re">비밀번호확인</label>
+            <input
+              type="password"
+              maxlength="20"
+              name="userpw_re"
+              id="userpw_re"
+              placeholder="비밀번호확인"
             />
           </div>
           <div class="form-group">
@@ -80,6 +91,29 @@
           <div class="form-group">
             <label for="birth">생년월일</label>
             <input type="date" name="birth" id="birth" />
+          </div>
+          <div class="form-group wnal">
+            <label for="ssn">주민등록번호</label>
+            <div class="wnal_box">
+              <input
+                type="text"
+                name="ssn1"
+                id="ssn1"
+                maxlength="6"
+                class="ssn"
+              />
+              -
+              <input
+                type="text"
+                name="ssn2"
+                id="ssn2"
+                maxlength="7"
+                class="ssn"
+              />
+            </div>
+            <button type="button" onclick="ssnCheck()">
+              주민등록번호 검증
+            </button>
           </div>
           <div class="form-group">
             <label for="region">통신사</label>
@@ -127,7 +161,7 @@
             <label for="hp">휴대전화번호</label>
             <input
               type="tel"
-              maxlength="11"
+              maxlength="13"
               name="hp"
               id="hp"
               placeholder="휴대전화번호"

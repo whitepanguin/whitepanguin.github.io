@@ -160,10 +160,6 @@ input[type="checkbox"] {
 }
 fieldset {
   display: grid;
-  grid-template-areas:
-    "1 2"
-    "3 4"
-    "5 0";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   border: 1px solid #ccc;
@@ -172,6 +168,20 @@ fieldset {
 }
 .form-group {
   margin-bottom: 15px;
+}
+.wnal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.wnal_box {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border: 1px solid var(--color-primary-variant);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 button[type="submit"] {
   background-color: #27667b;
@@ -209,21 +219,6 @@ button[type="submit"]:hover {
   grid-template-columns: 20px 470px 15px;
   grid-template-rows: auto;
   align-items: center;
-}
-.sq1 {
-  grid-area: 1;
-}
-.sq2 {
-  grid-area: 2;
-}
-.sq3 {
-  grid-area: 3;
-}
-.sq4 {
-  grid-area: 4;
-}
-.sq4 {
-  grid-area: 5;
 }
 .question-fix {
   position: fixed;
