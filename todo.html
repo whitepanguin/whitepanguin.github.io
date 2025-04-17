@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="./css/todo_style.css" />
+    <script src="./js/todo.js"></script>
+  </head>
+  <body>
+    <h2>나의 할일</h2>
+    <div class="box">
+      <input
+        type="text"
+        name="inputbox"
+        id="inputbox"
+        placeholder="할 일 입력"
+      />
+      <button onclick="addTodo()">추가</button>
+    </div>
+    <div class="box">
+      <h3>할 일 목록</h3>
+      <ul id="todolist"></ul>
+    </div>
+  </body>
+</html>
