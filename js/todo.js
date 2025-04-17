@@ -32,7 +32,7 @@ function saveTodo() {
 }
 
 function fixTodo(e) {
-  e.style.display = "none";
+  e.remove()
   localStorage.removeItem(e.id);
   const li = document.createElement("li");
   li.innerHTML = `<input type="text" id="fixinputin" /><button onclick="saveTodo()">저장</button>`;
