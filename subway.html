@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subway</title>
+   <link rel="stylesheet" href="./css/subway_style.css">
+   <script src="./js/subway.js"></script>
+  </head>
+  <body>
+    <div id="title">
+      <h2>2025 지하철 혼잡도</h2>
+      <h3>
+        서울교통공사 1-8호선 30분 단위 평균 혼잡도로 30분간 지나는 열차들의 평균
+        혼잡도<strong
+          >(정원대비 승차인원으로, 승차인과 좌석수가 일치할 경우를 혼잡도 <span>34%</span>로
+          산정) 입니다.(단위: %)</strong
+        >. 서울교통공사 혼잡도 데이터는 요일구분(평일, 토요일, 일요일), 호선,
+        역번호, 역명, 상하선구분, 30분단위 별 혼잡도 데이터로 구성되어 있습니다.
+      </h3>
+      <img src="https://www.sisul.or.kr/open_content/skydome/images/img_subway.png" alt="map">
+    </div>
+    <div id="list">
+      <label for="day">요일 구분: </label>
+      <select name="day" id="day">
+        <option id="weekDay" value="평일">평일</option>
+        <option id="saturDay" value="토요일">토요일</option>
+        <option id="sunDay" value="일요일">일요일</option>
+      </select>
+      <label for="day">호선: </label>
+      <select name="where" id="where">
+        <option value="1" id="1">1</option>
+        <option value="2" id="2">2</option>
+        <option value="3" id="3">3</option>
+        <option value="4" id="4">4</option>
+        <option value="5" id="5">5</option>
+        <option value="6" id="6">6</option>
+        <option value="7" id="7">7</option>
+        <option value="8" id="8">8</option>
+      </select>
+      <button id="loadButton" onclick="loadData()">조회하기</button>
+      <input type="text" id="searchName" placeholder="역을 제외하고 넣어주세요"><button onclick="searchSubway()">검색하기</button>
+      
+    </div>
+    <div>
+      <div id="subwayInfo">데이터를 불러오는 중입니다...</div>
+    </div>
+    <div class="question-fix">
+      <a href="#">
+        <img
+          class="question"
+          src="images/question-solid.svg"
+          alt="question"
+          width="30px"
+          height="30px"
+        />
+      </a>
+    </div>
+    
+  </body>
+  <footer class="footer-text">
+    <p>Copyright &copy; 2025 My Website</p>
+  </footer>
+</html>

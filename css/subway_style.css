@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "GowunDodum-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Global 변수 */
+:root {
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
+  --color-text: var(--color-white);
+
+  /* colors */
+  --color-white: #fff;
+  --color-black: #113370;
+  --color-blue: #20f903;
+  --color-orange: #fd6413;
+  --color-gray: #274db6;
+
+  /* size */
+  --size-max-width: 1200px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "GowunDodum-Regular";
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(223, 221, 221);
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+#title{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#title h3{
+  width: 80%;
+}
+#title span{
+  color: var(--color-accent-variant);
+}
+#loadButton {
+  display: none;
+}
+#list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#displaySubway{
+  display: flex; 
+  align-items: flex-end; 
+  height: 400px; 
+  gap: 6px; 
+  overflow-x: auto; 
+  overflow-y: visible;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #ccc;
+}
+#displayBox{
+  text-align: center; 
+  width: 25px;
+  position: relative;
+  margin: 0 auto;
+}
+#displayLabel{
+  font-size: 11px; 
+  margin-bottom: 6px; 
+  height: 20px;
+  white-space: nowrap;   
+  overflow: hidden;     
+}
+#displayGraph{
+  width: 90%;
+  border-radius: 4px 4px 0 0;
+  transition: 0.3s;
+  margin: 0 auto;
+  height: 100%;
+}
+#displayTime{
+  font-size: 10px;
+  margin-top: 4px;
+  position: absolute; 
+  bottom: -30px; 
+  width: 100%;
+  text-align: center; 
+}
+#subwayInfo{
+  margin: 5px 10px;
+}
+.footer-text {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 100px 0;
+  color: #777;
+}
+.question-fix {
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+}
+.question {
+  cursor: pointer;
+  border: 2px solid #333;
+  background-color: lightseagreen;
+  border-radius: 50%;
+}
+@media (min-width: 768px) and (max-width: 1250px) {
+  /* body {
+    background-color: aqua;
+  } */
+  #displayBox{
+    width: 15px;
+  }
+  #subwayInfo{
+    margin: 5%;
+  }
+  #displayTime{
+    bottom: 5px; 
+  }
+  #displayLabel{
+    font-size: 9px; 
+    width: 15px;
+    margin-bottom: 20px; 
+  }
+}
+/* 화면 너비가 767px 이하일 때 (모바일) */
+@media (max-width: 767px) {
+  /* body {
+    background-color: deeppink;
+  } */
+  #displayBox{
+    width: 10px;
+  }
+  #subwayInfo{
+    margin: 5%;
+  }
+  #displayTime{
+    bottom: 3px; 
+  }
+}
