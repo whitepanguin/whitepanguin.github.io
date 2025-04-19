@@ -6,7 +6,7 @@ let lastFilteredData = [];
 
 async function fetchAllData() {
 const totalPages = 167;
-document.getElementById("subwayInfo").innerText = "📦 데이터 불러오는 중입니다...";
+document.getElementById("subwayInfo").innerText = "🔴 데이터 불러오는 중입니다...";
 document.getElementById("loadButton").style.display = "none";
 
 for (let page = 1; page <= totalPages; page++) {
@@ -15,20 +15,20 @@ try {
   const res = await fetch(url);
   const json = await res.json();
   cachedSubwayData = cachedSubwayData.concat(json.data);
-  console.log(`✅ ${page} 페이지 로드 완료`);
+  console.log(`${page} 페이지 로드 완료`);
 } catch (err) {
-  console.error(`❌ ${page} 페이지 로드 실패`, err);
+  console.error(`${page} 페이지 로드 실패`, err);
 }
 }
 
 dataLoaded = true;
-document.getElementById("subwayInfo").innerText = "✅ 데이터 다 불러옴!";
+document.getElementById("subwayInfo").innerText = "🟢 데이터 다 불러옴!";
 document.getElementById("loadButton").style.display = "inline-block";
 }
 
 function loadData() {
 if (!dataLoaded) {
-document.getElementById("subwayInfo").innerText = "⏳ 데이터 로딩 중입니다. 잠시만 기다려주세요.";
+document.getElementById("subwayInfo").innerText = "🏃‍♂️‍➡️ 데이터 로딩 중입니다. 잠시만 기다려주세요.";
 return;
 }
 
@@ -112,7 +112,7 @@ function searchSubway() {
   } else if (dataLoaded && cachedSubwayData.length > 0) {
     baseData = cachedSubwayData;
   } else {
-    document.getElementById("subwayInfo").innerText = "⏳ 데이터 로딩 중입니다. 잠시만 기다려주세요.";
+    document.getElementById("subwayInfo").innerText = "🏃‍♂️‍➡️ 데이터 로딩 중입니다. 잠시만 기다려주세요.";
     return;
   }
 
