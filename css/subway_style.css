@@ -59,6 +59,9 @@ ul {
 #loadButton {
   display: none;
 }
+#searchButton{
+  display: none;
+}
 #list{
   display: flex;
   flex-wrap: wrap;

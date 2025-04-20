@@ -24,6 +24,7 @@ try {
 dataLoaded = true;
 document.getElementById("subwayInfo").innerText = "🟢 데이터 다 불러옴!";
 document.getElementById("loadButton").style.display = "inline-block";
+document.getElementById("searchButton").style.display = "inline-block";
 }
 
 function loadData() {
