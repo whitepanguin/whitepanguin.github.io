@@ -259,3 +259,12 @@ function searchSubway() {
 window.onload = function () {
   fetchAllData();
 };
+
+document
+  .getElementById("searchName")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      searchSubway();
+    }
+  });
