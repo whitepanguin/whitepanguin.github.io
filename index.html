@@ -28,6 +28,7 @@
       src="https://kit.fontawesome.com/129028b7d6.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./js/index.js"></script>
   </head>
   <body>
     <!-- Header 시작 -->
@@ -48,23 +49,28 @@
           </ul>
         </nav>
       </div>
+      <button class="header__toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
     <!-- Header 끝 -->
     <!-- Main 시작 -->
     <main>
       <!-- Home 시작 -->
       <section id="home">
-        <img
-          class="home__avatar"
-          src="./images/profile.jpg"
-          alt="JYL's profile"
-        />
-        <div class="home__box">
-          <h2 class="home__title">
-            안녕하세요.
-            <strong class="home__title--string">이재용</strong>입니다.
-          </h2>
-          <p class="home__description">꿈을 꾸는 AI 개발자 재용입니다.</p>
+        <div class="home__container">
+          <img
+            class="home__avatar"
+            src="./images/profile.jpg"
+            alt="JYL's profile"
+          />
+          <div class="home__box">
+            <h2 class="home__title">
+              안녕하세요.
+              <strong class="home__title--strong">이재용</strong>입니다.
+            </h2>
+            <p class="home__description">꿈을 꾸는 AI 개발자 재용입니다.</p>
+          </div>
         </div>
       </section>
       <!-- Home 끝 -->
@@ -206,9 +212,7 @@
         </div>
       </section>
       <!-- skills 끝 -->
-      <!-- work 시작 -->
 
-      <!-- license 끝 -->
       <!-- Arrow Up 시작 -->
       <aside>
         <a href="#home" title="위로">
@@ -218,6 +222,17 @@
       <!-- Arrow Up 끝 -->
     </main>
     <!-- Main 끝 -->
+    <div class="question-fix">
+      <a href="#">
+        <img
+          class="question"
+          src="images/arrow.png"
+          alt="question"
+          width="30px"
+          height="30px"
+        />
+      </a>
+    </div>
     <!-- Footer 시작 -->
     <footer id="contact">
       <h2>연락주세요</h2>
