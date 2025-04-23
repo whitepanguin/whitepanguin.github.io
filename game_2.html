@@ -9,7 +9,9 @@
     <input type="number" id="guessInput" placeholder="숫자 입력" />
     <button onclick="checkGuess()">확인</button>
     <p id="message"></p>
-
+    <ul id="list" style="list-style-type: none">
+      <li>기록!</li>
+    </ul>
     <script>
       const answer = Math.floor(Math.random() * 100) + 1;
       let attempts = 0;
@@ -20,13 +22,17 @@
 
         attempts++;
         const message = document.getElementById("message");
-
+        const li = document.createElement("li");
         if (guess === answer) {
-          message.textContent = `정답! ${attempts}번 만에 맞췄어요 🎉`;
+          message.textContent = `${guess} 정답! ${attempts}번 만에 맞췄어요 🎉`;
         } else if (guess < answer) {
           message.textContent = "너무 작아요! ⬆️";
+          li.textContent = `${guess}: 너무 작아요! ⬆️`;
+          list.appendChild(li);
         } else {
           message.textContent = "너무 커요! ⬇️";
+          li.textContent = `${guess}: 너무 커요! ⬇️`;
+          list.appendChild(li);
         }
         input.value = "";
       }
