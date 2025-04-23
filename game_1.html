@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>반응속도 테스트</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+        color: white;
+      }
+
+      #box {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        cursor: pointer;
+        user-select: none;
+      }
+
+      #result {
+        margin-top: 20px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="box">클릭해서 시작!</div>
+      <div id="result"></div>
+    </div>
+
+    <script>
+      const box = document.getElementById("box");
+      const result = document.getElementById("result");
+      let startTime, timeoutId;
+      let ready = false;
+
+      function startGame() {
+        box.style.backgroundColor = "red";
+        box.textContent = "기다리세요...";
+        result.textContent = "";
+        ready = false;
+
+        const delay = Math.random() * 3000 + 2000; // 2~5초 랜덤 대기
+
+        timeoutId = setTimeout(() => {
+          box.style.backgroundColor = "green";
+          box.textContent = "지금 클릭!";
+          startTime = new Date().getTime();
+          ready = true;
+        }, delay);
+      }
+
+      box.addEventListener("click", () => {
+        if (!startTime && !ready) {
+          startGame();
+        } else if (ready) {
+          const endTime = new Date().getTime();
+          const reactionTime = endTime - startTime;
+          box.textContent = "클릭해서 다시 시작";
+          result.textContent = `반응속도: ${reactionTime}ms`;
+          ready = false;
+          startTime = null;
+        } else {
+          clearTimeout(timeoutId);
+          box.textContent = "너무 빨라요! 다시 시작!";
+          result.textContent = "";
+          startTime = null;
+          ready = false;
+        }
+      });
+    </script>
+  </body>
+</html>
