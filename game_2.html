@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>숫자 맞추기 게임</title>
+  </head>
+  <body>
+    <h1>숫자 맞추기 게임</h1>
+    <p>1부터 100 사이의 숫자를 맞춰보세요!</p>
+    <input type="number" id="guessInput" placeholder="숫자 입력" />
+    <button onclick="checkGuess()">확인</button>
+    <p id="message"></p>
+
+    <script>
+      const answer = Math.floor(Math.random() * 100) + 1;
+      let attempts = 0;
+
+      function checkGuess() {
+        const input = document.getElementById("guessInput");
+        const guess = Number(input.value);
+
+        attempts++;
+        const message = document.getElementById("message");
+
+        if (guess === answer) {
+          message.textContent = `정답! ${attempts}번 만에 맞췄어요 🎉`;
+        } else if (guess < answer) {
+          message.textContent = "너무 작아요! ⬆️";
+        } else {
+          message.textContent = "너무 커요! ⬇️";
+        }
+        input.value = "";
+      }
+      document
+        .getElementById("guessInput")
+        .addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            checkGuess();
+          }
+        });
+    </script>
+  </body>
+</html>
