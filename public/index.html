@@ -29,6 +29,7 @@
       crossorigin="anonymous"
     ></script>
     <script defer src="./js/index.js"></script>
+    <script defer src="./js/main.js"></script>
   </head>
   <body>
     <!-- Header 시작 -->
@@ -45,10 +46,16 @@
               <a href="best-eat.html" class="header__menu__item">음식추천</a>
             </li>
             <li><a href="resume.html" class="header__menu__item">이력서</a></li>
-            <li><a href="login.html" class="header__menu__item">로그인</a></li>
+            <li>
+              <a href="login.html" class="header__menu__item" id="login-menu"
+                >로그인</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
+      <div id="login-status"></div>
+      <button id="logout-btn" style="display: none">로그아웃</button>
       <button class="header__toggle">
         <i class="fa-solid fa-bars"></i>
       </button>

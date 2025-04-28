@@ -86,9 +86,9 @@ async function sendit(event) {
     return false;
   }
 
-  if (!expuserNameText.test(username.value)) {
+  if (!expuserNameText.test(name.value)) {
     alert("이름은 한글로 입력하세요");
-    username.focus();
+    name.focus();
     return false;
   }
 
@@ -133,6 +133,8 @@ async function sendit(event) {
 
     if (response.ok) {
       alert("회원가입 성공!");
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('userid', data.userid);
       window.location.href = "/";
     } else {
       alert(data.message || "회원가입 실패");
