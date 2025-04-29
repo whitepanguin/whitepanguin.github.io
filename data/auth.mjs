@@ -71,7 +71,7 @@ export async function createUser(userid, password, name, email) {
       email,
     };
     users = [user, ...users];
-    return users;
+    return user;
   } else {
     return { message: "이미 있는 계정입니다" };
   }
