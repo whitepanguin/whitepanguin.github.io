@@ -24,8 +24,21 @@ async function sendit(event) {
     userid.focus();
     return false;
   }
+  if (!expIdText.test(userid.value)) {
+    alert("아이디는 4자 이상 20자 이하의 영문자 및 숫자로 입력하세요.");
+    userid.focus();
+    return false;
+  }
+
   if (password.value === "") {
     alert("비밀번호를 입력해주세요.");
+    password.focus();
+    return false;
+  }
+  if (!expPwText.test(password.value)) {
+    alert(
+      "비밀번호는 8자이상 20자이하의 영문자, 숫자, 특수문자를 한 자 이상 꼭 포함해야합니다."
+    );
     password.focus();
     return false;
   }
@@ -34,8 +47,18 @@ async function sendit(event) {
     password_re.focus();
     return false;
   }
+  if (password.value != password_re.value) {
+    alert("비밀번호와 비밀번호 확인이 일치하지 않습니다");
+    password_re.focus();
+    return false;
+  }
   if (email.value === "") {
     alert("이메일을 입력해주세요.");
+    email.focus();
+    return false;
+  }
+  if (!expEmailText.test(email.value)) {
+    alert("이메일 확인해주세요");
     email.focus();
     return false;
   }
@@ -44,8 +67,19 @@ async function sendit(event) {
     name.focus();
     return false;
   }
+  if (!expuserNameText.test(name.value)) {
+    alert("이름은 한글로 입력하세요");
+    name.focus();
+    return false;
+  }
+
   if (ssn1.value === "") {
     alert("주민등록 앞 번호를 입력해주세요.");
+    ssn1.focus();
+    return false;
+  }
+  if (!expSsn1Text.test(ssn1.value)) {
+    alert("주민등록번호 확인 해주세요");
     ssn1.focus();
     return false;
   }
@@ -54,52 +88,14 @@ async function sendit(event) {
     ssn2.focus();
     return false;
   }
-  if (hp.value === "") {
-    alert("전화번호를 입력해주세요.");
-    hp.focus();
-    return false;
-  }
-
-  if (!expIdText.test(userid.value)) {
-    alert("아이디는 4자 이상 20자 이하의 영문자 및 숫자로 입력하세요.");
-    userid.focus();
-    return false;
-  }
-
-  if (!expPwText.test(password.value)) {
-    alert(
-      "비밀번호는 8자이상 20자이하의 영문자, 숫자, 특수문자를 한 자 이상 꼭 포함해야합니다."
-    );
-    password.focus();
-    return false;
-  }
-
-  if (password.value != password_re.value) {
-    alert("비밀번호와 비밀번호 확인이 일치하지 않습니다");
-    password_re.focus();
-    return false;
-  }
-
-  if (!expEmailText.test(email.value)) {
-    alert("이메일 확인해주세요");
-    email.focus();
-    return false;
-  }
-
-  if (!expuserNameText.test(name.value)) {
-    alert("이름은 한글로 입력하세요");
-    name.focus();
-    return false;
-  }
-
-  if (!expSsn1Text.test(ssn1.value)) {
-    alert("주민등록번호 확인 해주세요");
-    ssn1.focus();
-    return false;
-  }
   if (!expSsn2Text.test(ssn2.value)) {
     alert("주민등록번호 확인 해주세요");
     ssn2.focus();
+    return false;
+  }
+  if (hp.value === "") {
+    alert("전화번호를 입력해주세요.");
+    hp.focus();
     return false;
   }
   if (!expHpText.test(hp.value)) {
@@ -107,6 +103,7 @@ async function sendit(event) {
     hp.focus();
     return false;
   }
+
   const signupData = {
     userid: userid.value,
     password: password.value,
@@ -133,8 +130,8 @@ async function sendit(event) {
 
     if (response.ok) {
       alert("회원가입 성공!");
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('userid', data.userid);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userid", data.userid);
       window.location.href = "/";
     } else {
       alert(data.message || "회원가입 실패");
