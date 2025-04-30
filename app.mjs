@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import postsRouter from "./router/post.mjs";
 import authRouter from "./router/auth.mjs";
+import sqlRouter from "./router/sql.mjs";
 import { config } from "./config.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -26,6 +27,7 @@ app.get("/", (req, res) => {
 
 app.use("/posts", postsRouter);
 app.use("/auth", authRouter);
+app.use("/mysql", sqlRouter);
 
 app.use((req, res, next) => {
   res.sendStatus(404);
