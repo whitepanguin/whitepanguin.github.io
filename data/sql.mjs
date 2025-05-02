@@ -139,3 +139,45 @@ export async function deleteTask(task_id) {
   }
   return todo;
 }
+/*
+import { db } from "../db.mjs";
+
+export async function getAllauth() {
+  const [rows] = await pool.query('SELECT * FROM auth');
+  return rows;
+}
+export async function getAlltodo() {
+  const [rows] = await pool.query('SELECT * FROM todo');
+  return rows;
+}
+export async function gettodoByUserid(userid) {
+  const [rows] = await pool.query('SELECT * FROM todo WHERE userid = ?', [userid]);
+  return rows;
+}export async function getById(task_id) {
+  const [rows] = await pool.query('SELECT * FROM todo WHERE task_id = ?', [task_id]);
+  return rows[0]; 
+}
+export async function create(userid, task_list) {
+  await pool.query('INSERT INTO todo (userid, list) VALUES (?, ?)', [userid, task_list]);
+  const [rows] = await pool.query('SELECT * FROM todo WHERE userid = ? ORDER BY task_id DESC', [userid]);
+  return rows;
+}
+export async function updateTask(task_id, task_list) {
+  const [result] = await pool.query('UPDATE todo SET list = ? WHERE task_id = ?', [task_list, task_id]);
+  if (result.affectedRows === 0) {
+    throw new Error("수정할 데이터가 없습니다.");
+  }
+  const [updated] = await pool.query('SELECT * FROM todo WHERE task_id = ?', [task_id]);
+  return updated[0];
+}
+export async function deleteTask(task_id) {
+  const [result] = await pool.query('DELETE FROM todo WHERE task_id = ?', [task_id]);
+  if (result.affectedRows === 0) {
+    throw new Error("삭제할 데이터가 없습니다.");
+  }
+  const [rows] = await pool.query('SELECT * FROM todo');
+  return rows;
+}
+
+
+*/
